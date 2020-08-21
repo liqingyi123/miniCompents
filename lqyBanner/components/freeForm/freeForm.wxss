@@ -1,0 +1,19 @@
+/* component/freeForm/freeForm.wxss */
+.flex_row{display: flex;flex-direction: row;}
+.flex_column{display: flex;flex-direction: column;}
+.item_center{align-items: center;justify-content: center;}
+.item_between{align-items: center;justify-content: space-between;}
+.item_around{align-items: center;justify-content: space-around;}
+
+.freeForm{width: 100vw;height: 100vh;position: fixed;z-index: 999;background-color: rgba(0, 0, 0, .5);top: 0;}
+.hide_a{transform: scale(0);transition: all .3s;}
+.show_a{transform: scale(1);transition: all .3s;}
+
+.freeFormBody{position: relative;width: calc(86vw - 140rpx);margin: 0 auto;padding: 40rpx 70rpx;background-color: white;border-radius: 10rpx;}
+.closeBtn{position: absolute;margin-top: -20rpx;right: 20rpx;color: #9D9D9D;background-color: #F0F0F0;border-radius: 50%;width: 40rpx;line-height: 40rpx;text-align: center;}
+.formTitle{width: 100%;text-align: center;line-height: 80rpx;font-size: 40rpx;font-weight: 600;}
+.formInfo{color: #373737;letter-spacing: 5rpx;}
+.formBody{width: calc(90% - 30rpx);margin: 20rpx auto;padding: 0 15rpx;background-color: #F7F7F7;border-radius: 10rpx;height: 100rpx;align-items: center;}
+.formBody text{font-size: 30rpx;font-weight: bold;}
+.formBody input{width: calc(100% - 45rpx);}
+.submitBtn{width: 50%;margin: 0 auto;color: white;background-color: #F82F5A;text-align: center;line-height: 70rpx;border-radius: 10rpx;}

@@ -1,0 +1,6 @@
+<!--components/colorTitle/colorTitle.wxml-->
+<view class="colorChangeTitle" style="font-family:{{fontFamily}};height:{{height}}rpx;font-size:{{fontSize}}rpx;font-color:{{fontColor}};font-weight:{{fontWeight}};">
+  <view style="background:linear-gradient(to left,{{internalColor}},{{externalColor}});"></view>
+  <view>{{title}}</view>
+  <view style="background:linear-gradient(to right,{{internalColor}},{{externalColor}});"></view>
+</view>

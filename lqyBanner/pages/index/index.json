@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "luck-draw": "/components/luckDraw/luckDraw"
+  },
+  "enablePullDownRefresh": false
+}

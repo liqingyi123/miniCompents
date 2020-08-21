@@ -1,0 +1,17 @@
+<!--components/mySwiper/mySwiper.wxml-->
+<!-- 
+  authon: 李青逸
+  time: 2020-04-11 15:23
+  info: banner美化组件，使用时超简单，只需传入一个属性即可实现banner轮播效果
+  example： <my-swiper render-data="{{lists}}"></my-swiper>
+ -->
+<swiper style="height: {{height}}rpx;width: {{width}};"
+  autoplay="{{autoplay}}" previous-margin="{{previousMargin}}rpx" next-margin="{{nextMargin}}rpx" 
+  current="{{index}}" bindchange="swiperChange"
+  indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{lists}}" wx:index="{{index}}">
+    <swiper-item class="swiper-item">
+      <image mode="{{bannerMode}}" src="{{item.show}}" style="height:{{height-60}}rpx;width: 520rpx;border-radius: {{radius}}rpx;box-shadow: {{boxShadow}};" bindtap="itemClick" class="{{swiperIndex == index ? 'active' : ''}}"/>
+    </swiper-item>
+  </block>
+</swiper>

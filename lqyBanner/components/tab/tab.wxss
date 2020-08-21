@@ -1,0 +1,50 @@
+.o_body{
+  min-height: 100rpx;display: flex;flex-direction: row;font-size: 30rpx;font-weight: bold;position: relative;
+}
+.o_scroll{
+  overflow: hidden;position: relative;min-width: 100%;
+}
+.o_list{
+  display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;position: relative;
+}
+.o_item{
+  transition: all 0.2s;position: relative;text-align: center;white-space: nowrap;
+}
+.o_underLine{
+  width: 48rpx;height: 8rpx;position: absolute;border-radius: 4rpx;margin-left: calc((100% - 48rpx) / 2);bottom: 0;
+}
+
+/* 用户配置相对应的样式 */
+.center{
+  justify-content: center;
+}
+.center .o_item{
+  flex: 1;
+}
+.left{
+  justify-content: flex-start;
+}
+.right{
+  justify-content: flex-end;
+}
+.red{
+  color: #F21850;
+}
+.gray{
+  color: #FB0D9A;
+}
+.orange{
+  color: #EA8F06;
+}
+.green{
+  color: #0AE26F;
+}
+.blue{
+  color: #0A95E2;
+}
+.white{
+  color: #fff;
+}
+.black{
+  color: #000;
+}

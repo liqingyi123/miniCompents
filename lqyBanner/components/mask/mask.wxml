@@ -1,0 +1,13 @@
+<!--component/mask/mask.wxml-->
+<!-- 活动规则按钮 -->
+<view class="activeBtn {{showActiveInfo ? 'hide_b' : 'show_b'}}" bindtap="showActiveInfo">{{btnTitle}}</view>
+<!-- 活动规则遮罩 -->
+<view class="activeInfo flex_column item_center {{showActiveInfo ? 'show_a' : 'hide_a'}}" bindtap="showActiveInfo">
+  <view class="activeInfoBody" catchtap="doNone">
+    <view>{{btnTitle}}</view>
+    <view class="activeItem" wx:for="{{infoList}}" wx:for-index="activeIndex" wx:for-item="activeItem">
+      <sub wx:if="{{displayNumber}}">{{activeIndex+1}}</sub><text>{{activeItem}}</text>
+    </view>
+  </view>
+  <view class="activeclose">点击空白处关闭</view>
+</view>

@@ -1,0 +1,26 @@
+<!--components/freeSheetList/freeSheetList.wxml-->
+<view class="listBody">
+  <view class="listItem flex_row item_between" wx:for="{{lists}}" wx:for-index="index" wx:for-item="item">
+    <!-- 左边的商品图片、角标、抢购时间提示 -->
+    <view class="item_left" data-index="{{index}}" data-item="{{item}}" bindtap="itemClick">
+      <view class="sub_jb {{item.type == 0 ? 'sub_jb_new' : item.type == 1 ? 'sub_jb_live' : item.type == 2 ? 'sub_jb_three' : 'sub_jb_all'}}">{{item.usertype}}</view>
+      <view class="sub_djs" wx:if="{{item.canBuy == 3 || item.canBuy == 4}}">{{item.time}}开抢</view>
+      <view class="sub_none" wx:if="{{item.canBuy == 2}}">已抢光</view>
+      <image mode="scaleToFill" src="{{item.img}}"></image>
+    </view>
+    <!-- 右边的标题、规则、卷后价、卷、佣、返利、抢购按钮 -->
+    <view class="item_right flex_column">
+      <view class="item_title">{{item.title}}</view>
+      <view class="item_info">活动期间内每人限购{{item.xg}}件，活动结束付款无效</view>
+      <view class="item_money flex_row">
+        <view>券后价:<text>{{item.qmoney}}</text></view>
+        <view>{{item.quan}}</view>
+        <view wx:if="{{wxUser.role != 0}}">{{item.ymoney}}</view>
+      </view>
+      <view class="item_back">{{item.back}}</view>
+      <view wx:if="{{item.canBuy == 1 || item.canBuy == 4}}" class="item_buyBtn buyBtn_canbuy" data-index="{{index}}" data-item="{{item}}" bindtap="itemClick">立即抢购 ➤</view>
+      <view wx:if="{{item.canBuy == 3}}" class="item_buyBtn buyBtn_none" data-index="{{index}}" data-item="{{item}}" bindtap="itemClick">下期预告</view>
+      <view wx:if="{{item.canBuy == 2}}" class="item_buyBtn buyBtn_none" data-index="{{index}}" data-item="{{item}}" bindtap="itemClick">已抢光</view>
+    </view>
+  </view>
+</view>

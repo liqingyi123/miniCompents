@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "my-swiper": "../../components/mySwiper/mySwiper",
+    "my-mask": "../../components/mask/mask",
+    "free-form": "../../components/freeForm/freeForm",
+    "my-colortitle": "../../components/colorTitle/colorTitle",
+    "free-sheet-list": "../../components/freeSheetList/freeSheetList",
+    "tab": "/components/tab/tab"
+  }
+}

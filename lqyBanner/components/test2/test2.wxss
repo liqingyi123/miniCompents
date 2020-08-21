@@ -1,0 +1,7 @@
+/* components/test2/test2.wxss */
+.body{
+  width: 100vw;height: 300rpx;background-color: darkgoldenrod;border-radius: 20rpx;
+}
+.btn{
+  width: 100rpx;line-height: 50rpx;text-align: center;border: 1rpx solid #000;
+}

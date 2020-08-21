@@ -1,0 +1,31 @@
+/* components/freeSheetList/freeSheetList.wxss */
+.flex_row{display: flex;flex-direction: row;}
+.flex_column{display: flex;flex-direction: column;}
+.item_center{align-items: center;justify-content: center;}
+.item_between{align-items: center;justify-content: space-between;}
+.item_around{align-items: center;justify-content: space-around;}
+
+.listBody{width: 92vw;margin: 0 4vw;}
+.listItem{width: 100%;border-radius: 10rpx;background-color: #F7F7F7;margin: 10rpx 0;}
+.item_left,.item_left image{width: 275rpx;height: 275rpx;}
+.item_left,.item_right{margin: 10rpx;}
+.item_left{overflow: hidden;border-radius: 10rpx;position: relative;z-index: 10;}
+.sub_jb,.sub_djs,.sub_none{position: absolute;color: white;display: flex;flex-direction: column;font-weight: 500;align-items: center;}
+.sub_jb{transform: rotate(-45deg);width: 150rpx;height: 80rpx;margin-top: -25rpx;margin-left: -55rpx;font-size: 20rpx;justify-content: flex-end;padding-bottom: 10rpx;}
+.sub_jb_new{background: linear-gradient(0deg,rgba(248,47,90,1) 0%,rgba(252,107,143,1) 100%);}
+.sub_jb_three{background:linear-gradient(0deg,rgba(0,102,255,1) 0%,rgba(252,107,143,1) 100%);}
+.sub_jb_live{background:linear-gradient(0deg,rgba(255,102,0,1) 0%,rgba(252,107,143,1) 100%);}
+.sub_jb_all{background:linear-gradient(0deg,rgba(255,0,204,1) 0%,rgba(252,107,143,1) 100%);}
+.sub_djs{background:rgba(248,47,90,.5);font-size: 28rpx;width: 100%;line-height: 65rpx;margin-top: 210rpx;justify-content: center;}
+.sub_none{width: 275rpx;height: 275rpx;background: rgba(153,153,153,.5);justify-content: center;z-index: 9;font-weight: bold;}
+.item_right{width: calc(92vw - 275rpx - 40rpx);height: 275rpx;justify-content: space-between;align-items: center;}
+.item_title{width: 100%;font-size: 30rpx;font-weight: bold;color: #333;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.item_info{width: 100%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;color: #666;font-size: 20rpx;}
+.item_money,.item_back,.item_buyBtn,.item_buyBtn_none{margin-right: auto;}
+.item_money view:nth-child(1){font-size: 18rpx;color: #EB2D58;}
+.item_money view:nth-child(1) text{font-size: 36rpx;font-weight: bold;}
+.item_money view:nth-child(2),.item_money view:nth-child(3){color: white;background: url(https://wuse-public.oss-cn-beijing.aliyuncs.com/wechat/wuse/freeSheet/juan.png);background-repeat: no-repeat;background-size: 100% 100%;margin: 0 10rpx;font-size: 24rpx;height: 34rpx;display: flex;flex-direction: row;align-items: center;justify-content: center;padding: 4rpx 8rpx}
+.item_back{color: #F82F5A;border: 2rpx solid #F82F5A;border-radius: 10rpx;font-size: 24rpx;padding: 5rpx 10rpx;font-weight: 600;}
+.item_buyBtn{border-radius: 30rpx;color: white;font-size: 26rpx;font-weight: 700;width: 236rpx;line-height: 40rpx;text-align: center;}
+.buyBtn_canbuy{background-color: #F82F5A;}
+.buyBtn_none{background-color: #ccc;}

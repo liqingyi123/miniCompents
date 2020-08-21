@@ -1,0 +1,19 @@
+<!--components/tab/tab.wxml-->
+<view class="o_body" style="{{style}}">
+  <scroll-view class="o_scroll" scroll-x scroll-with-animation scroll-left="{{scrollLeft}}">
+    <!-- 如果导航项超过5个则强制使用靠左对其排列 -->
+    <view class="o_list {{tabList.length>5?'left':align}}">
+      <!-- 导航项集合 -->
+      <view wx:for="{{tabList}}" wx:key="index" data-index="{{index}}"
+        id="item{{index}}" data-item="{{item}}"
+        class="o_item {{nowChecked==index?checkColor:defaultColor}}" 
+        style="min-width:{{itemWidth}}rpx;line-height:{{height}}rpx;"
+        bindtap="menuChange">
+          <!-- 选中时的下划线 -->
+          <view wx:if="{{underLine && nowChecked==index}}" class="o_underLine" style="background-color:{{checkColor=='red'?'#F21850':checkColor=='gray'?'#FB0D9A':checkColor=='orange'?'#EA8F06':checkColor=='green'?'#0AE26F':checkColor=='blue'?'#0A95E2':checkColor=='white'?'#fff':'#000'}};"></view>
+          <!-- 通用化遍历字段-name、title、或者本身 -->
+          {{item.name ? item.name : item.title ? item.title : item}}
+      </view>
+    </view>
+  </scroll-view>
+</view>

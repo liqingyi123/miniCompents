@@ -1,0 +1,5 @@
+/* components/colorTitle/colorTitle.wxss */
+.colorChangeTitle{width: 100vw;display: flex;flex-direction: row;align-items: center;justify-content: center;}
+.colorChangeTitle view:nth-child(1),.colorChangeTitle view:nth-child(3){width: 200rpx;height: 10rpx;border-radius: 5rpx;}
+.colorChangeTitle view:nth-child(1){margin-right: 20rpx;}
+.colorChangeTitle view:nth-child(3){margin-left: 20rpx;}

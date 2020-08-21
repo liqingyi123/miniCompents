@@ -1,0 +1,4 @@
+<!--components/test2/test2.wxml-->
+<view class="body">
+  <view class="btn" bindtap="showhb">按钮2</view>
+</view>

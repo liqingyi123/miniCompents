@@ -1,0 +1,11 @@
+<!-- 使用抽奖组件-默认为依据奖项权重随机抽奖 -->
+<luck-draw size="{{4}}" 
+  list="{{list}}" 
+  bodyWidth="95vw" 
+  startBtn="{{startBtn}}" 
+  id="luckDraw" 
+  bind:luckdraw="luckdraw"></luck-draw>
+<!-- 固定抽到奖项“谢谢参与” -->
+<view bindtap="go" data-num="11" style="margin-top:100rpx">
+  指定抽中固定奖项
+</view>

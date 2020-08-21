@@ -1,0 +1,13 @@
+<!--component/freeForm/freeForm.wxml-->
+<view class="freeForm flex_row item_center {{showFreeForm?'show_a':'hide_a'}}">
+  <view class="freeFormBody">
+    <view class="closeBtn" bindtap="close">×</view>
+    <view class="formTitle">免单验证</view>
+    <view class="formInfo">本商品为免单商品，确认收货后五星好评付款金额将直接转入你的微信钱包请验证免单金额，以确认免单规则</view>
+    <view class="formBody flex_row">
+      <text>￥</text>
+      <input type="digit" value="{{inputValue}}" bindinput="keyInput"></input>
+    </view>
+    <view class="submitBtn" bindtap="itemClick">确认</view>
+  </view>
+</view>

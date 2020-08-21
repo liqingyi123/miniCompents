@@ -1,0 +1,6 @@
+/**app.wxss**/
+.flex_row{display: flex;flex-direction: row;}
+.flex_column{display: flex;flex-direction: column;}
+.item_center{align-items: center;justify-content: center;}
+.item_between{align-items: center;justify-content: space-between;}
+.item_around{align-items: center;justify-content: space-around;}

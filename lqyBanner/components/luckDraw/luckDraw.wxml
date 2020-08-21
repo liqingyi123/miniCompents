@@ -1,0 +1,30 @@
+<!--components/luckDraw/luckDraw.wxml-->
+<view class="body" style="width:{{bodyWidth}};margin-left:calc((100vw - {{bodyWidth}}) / 2);">
+  <!-- 奖项列表 -->
+  <view class="itemBody">
+    <!-- 奖项 -->
+    <view class="item" 
+      style="width:calc((100% - 8rpx * {{size * 2}}) / {{size}});height:{{itemHeight?itemHeight+'rpx': 'calc(('+bodyWidth+' - 8rpx * '+size * 2+') / '+size+')'}};" 
+      wx:for="{{allList}}" wx:key="index">
+      <!-- 当前奖项抽中时的遮罩 -->
+      <view wx:if="{{item.isChoose}}" 
+        class="showItem" 
+        style="background-color:{{chooseColor}}"></view>
+      <!-- 奖项图片 -->
+      <image class="bgPic" wx:if="{{item.info.pic}}" src="{{item.info.pic}}" />
+      <!-- 奖项标题 -->
+      <view class="itemTitle">{{item.info.title}}</view>
+      <!-- 奖项副标题 -->
+      <view class="itemSubTitle">{{item.info.subTitle}}</view>
+    </view>
+  </view>
+  <!-- 开始抽奖按钮 -->
+	<view class="startBtn" 
+    style="width:calc({{bodyWidth}} / 3 - 16rpx);height:calc({{bodyWidth}} / 3 - 16rpx);margin-left:calc(({{bodyWidth}} - ({{bodyWidth}} / 3 - 16rpx)) / 2);top:calc(({{bodyWidth}} - ({{bodyWidth}} / 3 - 16rpx)) / 2);background-color:{{startBtn.bgColor?startBtn.bgColor:'#FEE300'}};border-radius:{{startBtn.radius?startBtn.radius:10}}rpx;" 
+    bindtap="setRes">
+    <!-- 按钮文字 -->
+    <view style="color:{{startBtn.color?startBtn.color:'#F6251D'}}">{{startBtn.text?startBtn.text:'开始抽奖'}}</view>
+    <!-- 按钮副标题 -->
+    <text style="color:{{startBtn.subColor?startBtn.subColor:'#FB6761'}}">{{startBtn.subTitle?startBtn.subTitle:''}}</text>
+  </view>
+</view>

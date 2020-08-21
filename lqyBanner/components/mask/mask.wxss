@@ -1,0 +1,19 @@
+/* component/mask/mask.wxss */
+.hide_b{transform: translateX(100vw);transition: all .3s;}
+.show_b{transform: translateX(0);transition: all .3s;}
+.hide_a{transform: scale(0);transition: all .3s;}
+.show_a{transform: scale(1);transition: all .3s;}
+
+/* 活动规则浮层 */
+.activeBtn,.activeInfo{position: fixed;z-index: 999;}
+.activeBtn{top: 480rpx;right: 0;padding: 10rpx 10rpx 10rpx 20rpx;background-color: rgba(0, 0, 0, .3);border-top-left-radius: 30rpx;border-bottom-left-radius: 30rpx;font-size: 23rpx;color: white;font-weight: bold;}
+.activeInfo{width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, .6);top: 0;left: 0;}
+.activeInfoBody{background-image: url(https://wuse-public.oss-cn-beijing.aliyuncs.com/wechat/wuse/freeSheet/modalBg.png);width: calc(90vw - 180rpx);margin: 0 4vw 0 6vw;background-size: 100% 100%;background-repeat: no-repeat;padding: 100rpx 90rpx;}
+.activeInfoBody view:nth-child(1){width: 100%;font-size: 30rpx;font-weight: bold;color: #333333;text-align: center;margin: -20rpx 0 30rpx;}
+.activeInfoBody view:nth-child(1)::before{content: '——';display: inline-block;margin-right: 10rpx;}
+.activeInfoBody view:nth-child(1)::after{content: '——';display: inline-block;margin-left: 10rpx;}
+.activeItem{margin: 20rpx 0;font-size: 24rpx;}
+.activeclose{color: white; font-size: 28rpx;font-weight: bold;}
+.activeclose::before{content: '-';display: inline-block;margin-right: 10rpx;}
+.activeclose::after{content: '-';display: inline-block;margin-left: 10rpx;}
+sub{display: inline-flex;width: 30rpx;height: 30rpx;color: white;border-radius: 50%;background-color: rgba(248,47,90,1);font-size: 20rpx;margin-right: 10rpx;flex-direction: column;align-items: center;justify-content: center;}
